@@ -5,6 +5,7 @@ const html = document.documentElement;
 const canvas = document.getElementById("scrollAnimation");
 const context = canvas.getContext("2d");
 const next = document.getElementById("next");
+next.style.visibility = 'hidden';
 
 const frameCount = 108;
 // gets the current frame by index
@@ -27,6 +28,16 @@ const updateImage = index => {
   context.drawImage(img, 0, 0);
 }
 
+// preload images for network
+const preloadImages = () => {
+  for (let i = 1; i < frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i);
+  }
+};
+
+preloadImages()
+
 window.addEventListener('scroll', () => {  
   // how far has the user scrolled 
   const scrollTop = html.scrollTop;
@@ -45,13 +56,3 @@ window.addEventListener('scroll', () => {
   // specified function to update an animation before the next repaint
   requestAnimationFrame(() => updateImage(frameIndex + 1))
 });
-
-// preload images for network
-const preloadImages = () => {
-  for (let i = 1; i < frameCount; i++) {
-    const img = new Image();
-    img.src = currentFrame(i);
-  }
-};
-
-preloadImages()
