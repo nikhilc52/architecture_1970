@@ -1,21 +1,11 @@
 html {
-    height: 100vh;
+    margin: 0;
+    padding: 0;
   }
   
   body {
-    height: 5000vh;
-    width: 100vh;
-    justify-content: center;
     background-color: #000fff;
-  }
-  
-  canvas {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100vw;
-    max-height: 100vh;
+    height: 1000vh;
   }
   
   #next {

@@ -6,9 +6,17 @@
     <title>Intro</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <canvas id="scrollAnimation"></canvas>
+    <div id="scrolly-video"></div>
     <p id="next"><a href="part1.html">Next</a></p>
-    <script src="index-script.js"></script>
 </body>
+<script src="next.js"
+<script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+<script type="text/javascript">
+  new ScrollyVideo({
+    scrollyVideoContainer: "scrolly-video",
+    src: "videos/intro.m4v"
+  });
+</script>
 </html>
