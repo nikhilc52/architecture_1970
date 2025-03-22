@@ -19,6 +19,8 @@ function randomIntFromInterval(min, max) { // min and max included
 function task(i) {
     // every second do this
     setTimeout(function () {
+        if (i == 32) { loading.innerText = "Browser/device not supported." }
+        else {
         // get the only canvas element in the DOM
         try{const canvas = document.getElementsByTagName('canvas')[0];
             // if a random attribute is null, then it exists
@@ -33,7 +35,8 @@ function task(i) {
             // if there is no canvas element (not done loading video)
         catch (e){
             // randomization for UI
-            loading.innerText = ("Loading ... " + i*3 + "." + randomIntFromInterval(0,9) + "%")
-        }
+            if (randomIntFromInterval(0,1) == 1){ 
+            loading.innerText = ("Loading ... " + i*3 + "." + randomIntFromInterval(0,9) + "%")}
+        }}
     },1000*i);
 }
