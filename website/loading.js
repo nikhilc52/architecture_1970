@@ -19,7 +19,13 @@ function randomIntFromInterval(min, max) { // min and max included
 function task(i) {
     // every second do this
     setTimeout(function () {
-        if (i == 32) { loading.innerText = "Browser/device not supported." }
+        // if we reached the end of the loading screen
+        if (i == 32) { loading.innerText = "Loading ... 100.0%"
+            // stall on 100% loading for a second
+            setTimeout(() => {
+                loading.style.visibility = 'hidden'
+                video.style.visibility = 'visible'
+              }, "1000"); }
         else {
         // get the only canvas element in the DOM
         try{const canvas = document.getElementsByTagName('canvas')[0];
@@ -34,9 +40,7 @@ function task(i) {
             }}
             // if there is no canvas element (not done loading video)
         catch (e){
-            // randomization for UI
-            if (randomIntFromInterval(0,1) == 1){ 
-            loading.innerText = ("Loading ... " + i*3 + "." + randomIntFromInterval(0,9) + "%")}
+            loading.innerText = ("Loading ... " + i*3 + "." + randomIntFromInterval(0,9) + "%")
         }}
     },1000*i);
 }
