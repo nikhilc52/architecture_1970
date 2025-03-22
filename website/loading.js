@@ -6,8 +6,8 @@ video.style.visibility = 'hidden'
 const loading = document.getElementById("loading");
 loading.style.visibility = 'visible'
 
-// repeat the task for 33 secs
-for (let i = 1; i < 33; i++){
+// repeat the task for 20 secs
+for (let i = 0; i < 20; i++){
     task(i);
 }
 
@@ -20,7 +20,7 @@ function task(i) {
     // every second do this
     setTimeout(function () {
         // if we reached the end of the loading screen
-        if (i == 32) { loading.innerText = "Loading ... 100.0%"
+        if (i == 19) { loading.innerText = "Loading ... 100.0%"
             // stall on 100% loading for a second
             setTimeout(() => {
                 loading.style.visibility = 'hidden'
@@ -40,7 +40,7 @@ function task(i) {
             }}
             // if there is no canvas element (not done loading video)
         catch (e){
-            loading.innerText = ("Loading ... " + i*3 + "." + randomIntFromInterval(0,9) + "%")
+            loading.innerText = ("Loading ... " + i*5 + "." + randomIntFromInterval(0,9) + "%")
         }}
     },1000*i);
 }
