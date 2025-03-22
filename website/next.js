@@ -1,4 +1,5 @@
 // standard starting stuff
+const html = document.documentElement;
 const next = document.getElementById("next");
 next.style.visibility = 'hidden';
 

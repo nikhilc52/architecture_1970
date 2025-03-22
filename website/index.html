@@ -9,14 +9,17 @@
 
 <body>
     <div id="scrolly-video"></div>
-    <p id="next"><a href="part1.html">Next</a></p>
+    <p class="text" id="next"><a href="part1.html">Next</a></p>
+    <p class="text" id="loading">Loading ... 0%</p>
 </body>
-<script src="next.js"
+<script src="loading.js"></script>  
+<script src="next.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
 <script type="text/javascript">
   new ScrollyVideo({
     scrollyVideoContainer: "scrolly-video",
-    src: "videos/intro.m4v"
+    src: "videos/intro.mp4",
+    debug : true
   });
 </script>
 </html>
