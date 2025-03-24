@@ -5,6 +5,10 @@ video.style.visibility = 'hidden'
 // get the loading text
 const loading = document.getElementById("loading");
 loading.style.visibility = 'visible'
+const title = document.getElementById("title");
+title.style.visibility = 'visible'
+const desc = document.getElementById("desc");
+desc.style.visibility = 'visible'
 
 // repeat the task for 20 secs
 for (let i = 0; i < 20; i++){
@@ -24,6 +28,8 @@ function task(i) {
             // stall on 100% loading for a second
             setTimeout(() => {
                 loading.style.visibility = 'hidden'
+                desc.style.visibility = 'hidden'
+                title.style.visibility = 'hidden'
                 video.style.visibility = 'visible'
               }, "1000"); }
         else {

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 4</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <div id="scrolly-video"></div>
+    <p class="text" id="next"><a href="part5.html">Next</a></p>
+    <p class="text" id="title">Architecture 1970: Part 4</p>
+    <p class="text" id="loading">Loading ... 0%</p>
+    <p id="desc">Nikhil Chinchalkar</p>
+</body>
+<script src="loading.js"></script>  
+<script src="next.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+<script type="text/javascript">
+  new ScrollyVideo({
+    scrollyVideoContainer: "scrolly-video",
+    src: "videos/part3.mp4",
+    debug : true
+  });
+</script>
+</html>
