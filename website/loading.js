@@ -41,6 +41,8 @@ function task(i) {
                 // stall on 100% loading for a second
                 setTimeout(() => {
                     loading.style.visibility = 'hidden'
+                    desc.style.visibility = 'hidden'
+                    title.style.visibility = 'hidden'
                     video.style.visibility = 'visible'
                   }, "1000");
             }}

@@ -17,11 +17,14 @@ html {
     position: fixed;
     font-size: 50px;
     left: 50%;
-    top: 50px;
     transform: translate(-50%, -50%);
     max-width: 100vw;
     max-height: 100vh;
     text-align: center;
+  }
+
+  #next{
+    top: 50px;
   }
 
   #loading {
@@ -29,22 +32,17 @@ html {
   }
 
   #title{
+    top: 50px;
     font-size: 75px;
   }
 
   #desc {
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    padding: 15px;
-    color: white;
-    background-color: #000fff;
-    position: fixed;
     font-size: 25px;
-    left: 50%;
     bottom: 0px;
-    transform: translate(-50%, -50%);
-    max-width: 100vw;
-    max-height: 100vh;
+  }
+
+  #end {
+    bottom: 0px;
   }
 
   a {
