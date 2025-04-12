@@ -9,9 +9,16 @@ const title = document.getElementById("title");
 title.style.visibility = 'visible'
 const desc = document.getElementById("desc");
 desc.style.visibility = 'visible'
+const date = document.getElementById("date");
+date.style.visibility = 'visible'
+const play = document.getElementById("play");
+play.style.visibility = 'visible'
+const time = document.getElementById("time");
+time.style.visibility = 'visible'
 const scroll_to_begin = document.getElementById("scroll");
 scroll_to_begin.style.visibility = 'hidden'
 
+console.log(window.screen.width)
 
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -21,7 +28,7 @@ function delay(ms) {
 async function run() {
     for (let i = 0; i < 20; i++) {
         await task(i)
-        if (scroll_to_begin.style.visibility == 'visible'){break}
+        if (scroll_to_begin.style.visibility == 'visible') { break }
     }
 }
 
@@ -42,6 +49,9 @@ async function task(i) {
             loading.style.visibility = 'hidden'
             desc.style.visibility = 'hidden'
             title.style.visibility = 'hidden'
+            date.style.visibility = 'hidden'
+            play.style.visibility = 'hidden'
+            time.style.visibility = 'hidden'
             video.style.visibility = 'visible'
             scroll_to_begin.style.visibility = 'visible'
         }, "1000");
@@ -58,6 +68,9 @@ async function task(i) {
                     loading.style.visibility = 'hidden'
                     desc.style.visibility = 'hidden'
                     title.style.visibility = 'hidden'
+                    date.style.visibility = 'hidden'
+                    play.style.visibility = 'hidden'
+                    time.style.visibility = 'hidden'
                     video.style.visibility = 'visible'
                     scroll_to_begin.style.visibility = 'visible'
                 }, "1000");

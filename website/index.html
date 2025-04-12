@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logo.png">
 </head>
 
 <body>
-    <div id="scrolly-video"></div>
-    <p class="text" id="next"><a href="part2.html">Next</a></p>
-    <p class="text" id="title">Architecture 1970</p>
-    <p class="text" id="loading">Loading ... 0%</p>
-    <p class="text" id="desc">Nikhil Chinchalkar</p>
-    <p class="text" id="scroll">Scroll to begin...</p>
+  <div id="scrolly-video"></div>
+  <p class="text" id="next"><a href="part2.html">Next</a></p>
+  <p class="text" id="title">Architecture 1970</p>
+  <p class="text" id="loading">Loading ... 0%</p>
+  <p class="text" id="resize">Please resize/rotate the screen.</p>
+  <p class="text" id="date"></p>
+  <p class="text" id="play">Play ▶︎</p>
+  <p class="text" id="time">-- : --</p>
+  <p class="text" id="desc">Nikhil Chinchalkar</p>
+  <p class="text" id="scroll">Scroll to begin...</p>
 </body>
-<script src="loading.js"></script>  
+<script src="loading.js"></script>
 <script src="next.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
 <script type="text/javascript">
   new ScrollyVideo({
     scrollyVideoContainer: "scrolly-video",
     src: "videos/intro_10.mp4",
-    debug : false
+    debug: false
   });
 </script>
+<script>
+  n = new Date();
+  y = n.getFullYear();
+  m = n.getMonth() + 1;
+  d = n.getDate();
+  document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+</script>
+
 </html>
