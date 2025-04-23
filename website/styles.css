@@ -106,6 +106,7 @@ body {
   top: 5%;
   font-size: 175%;
   left: 50%;
+  z-index: 5;
 
   animation: rgbText 2s steps(9) 0s infinite alternate;
 }
