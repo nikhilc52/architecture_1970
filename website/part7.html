@@ -9,17 +9,19 @@
 </head>
 
 <body>
+  <div class="lines"></div>
     <div id="scrolly-video"></div>
+    <p class="text" id="next">Nikhil Chinchalkar</p>
     <p class="text" id="title">Architecture 1970: Part 7/7</p>
     <p class="text" id="loading">Loading ... 0%</p>
     <p class="text" id="resize">Please resize/rotate the screen.</p>
-    <p class="text" id="date">3/19/1970</p>
     <p class="text" id="play">Play ▶︎</p>
     <p class="text" id="time">-- : --</p>
-    <p class="text" id="desc">Nikhil Chinchalkar</p>
+    <p class="text" id="desc">Nikhil Chinchalkar<br>3/19/1970</p>
     <p class="text" id="scroll">Scroll to continue...</p>
 </body>
 <script src="loading.js"></script>  
+<script src="next.js"></script>  
 <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
 <script type="text/javascript">
   new ScrollyVideo({
@@ -28,4 +30,5 @@
     debug : true
   });
 </script>
+<script src="resizing.js"></script>
 </html>

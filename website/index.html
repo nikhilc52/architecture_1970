@@ -10,25 +10,26 @@
 </head>
 
 <body>
+  <div class="lines"></div>
   <div id="scrolly-video"></div>
   <p class="text" id="next"><a href="part2.html">Next</a></p>
   <p class="text" id="title">Architecture 1970</p>
   <p class="text" id="loading">Loading ... 0%</p>
   <p class="text" id="resize">Please resize/rotate the screen.</p>
-  <p class="text" id="date"></p>
   <p class="text" id="play">Play ▶︎</p>
   <p class="text" id="time">-- : --</p>
-  <p class="text" id="desc">Nikhil Chinchalkar</p>
+  <p class="text" id="desc"></p>
   <p class="text" id="scroll">Scroll to begin...</p>
 </body>
 <script src="loading.js"></script>
 <script src="next.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrolly-video@0.0.24/dist/scrolly-video.js"></script>
 <script type="text/javascript">
   new ScrollyVideo({
     scrollyVideoContainer: "scrolly-video",
     src: "videos/intro_10.mp4",
-    debug: false
+    debug: false,
+    full: false
   });
 </script>
 <script>
@@ -36,7 +37,8 @@
   y = n.getFullYear();
   m = n.getMonth() + 1;
   d = n.getDate();
-  document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+  document.getElementById("desc").innerHTML = "Nikhil Chinchalkar<br>" + m + "/" + d + "/" + y;
 </script>
+<script src="resizing.js"></script>
 
 </html>
